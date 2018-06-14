@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">lib-core</string>
+    <string name="cancle">取消</string>
+    <string name="ok">确认</string>
+</resources>

@@ -1,0 +1,63 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.2.41'
+
+    ext.compileSdkVersion = 27
+    ext.buildToolsVersion = '27.0.3'
+    ext.minSdkVersion = 15
+    ext.targetSdkVersion = 27
+
+    ext.support_vesion = '27.1.1'
+
+    ext.lifecycle_version = '1.1.1'
+    ext.room_version = '1.1.0'
+
+    ext.gson_version = '2.8.5'
+
+    ext.kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    ext.databinding_compiler = "com.android.databinding:compiler:3.1.2"
+
+    ext.appcompat = "com.android.support:appcompat-v7:$support_vesion"
+    ext.constraint_layout = "com.android.support.constraint:constraint-layout:1.0.2"
+    ext.design = "com.android.support:design:$support_vesion"
+    ext.recyclerView = "com.android.support:recyclerview-v7:$support_vesion"
+
+    ext.lifecycle_extensions = "android.arch.lifecycle:extensions:$lifecycle_version"
+    ext.lifecycle_runtime = "android.arch.lifecycle:runtime:$lifecycle_version"
+    ext.lifecycle_compiler = "android.arch.lifecycle:compiler:$lifecycle_version"
+    //alternately - if using Java8, use the following instead of lifecycle-compiler
+    ext.lifecycle_common_java8 = "android.arch.lifecycle:common-java8:$lifecycle_version"
+    //optional - ReactiveStreams support for LiveData
+    ext.lifecycle_reactivestreams = "android.arch.lifecycle:reactivestreams:$lifecycle_version"
+
+    ext.room_runtime = "android.arch.persistence.room:runtime:$room_version"
+    ext.room_compiler = "android.arch.persistence.room:compiler:$room_version"
+    //optional - RxJava support for Room
+    ext.room_rxjava2 = "android.arch.persistence.room:rxjava2:$room_version"
+
+    ext.gson = "com.google.code.gson:gson:$gson_version"
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

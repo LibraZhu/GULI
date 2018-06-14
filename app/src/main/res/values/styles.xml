@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+        <item name="navigationIcon">@drawable/ic_back</item>
+    </style>
+
+    <style name="AppTheme.Splash" parent="AppTheme">
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>
