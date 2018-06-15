@@ -2,4 +2,16 @@
     <string name="app_name">GuLi</string>
     <string name="add">添加</string>
     <string name="countdown">倒计时</string>
+    <string name="schedule">日程</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu">菜单</string>
+    <string name="seven">日</string>
+    <string name="six">六</string>
+    <string name="five">五</string>
+    <string name="four">四</string>
+    <string name="three">三</string>
+    <string name="two">二</string>
+    <string name="one">一</string>
 </resources>

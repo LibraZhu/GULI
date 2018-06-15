@@ -5,4 +5,7 @@
     <color name="colorAccent">#333333</color>
 
     <color name="titleTextColor">@color/colorAccent</color>
+    <color name="bg_item">#7f000000</color>
+    <color name="bg_item_click">#9f000000</color>
+    <color name="bg_item_calendar_select">#0f000000</color>
 </resources>

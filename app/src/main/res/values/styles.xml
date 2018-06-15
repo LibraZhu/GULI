@@ -11,4 +11,13 @@
         <item name="android:windowBackground">@color/colorPrimary</item>
         <item name="android:windowNoTitle">true</item>
     </style>
+
+    <style name="TextHomeItem">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/textSize14</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ems">1</item>
+        <item name="android:maxLines">15</item>
+        <item name="android:ellipsize">end</item>
+    </style>
 </resources>

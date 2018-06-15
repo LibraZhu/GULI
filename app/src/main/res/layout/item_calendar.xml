@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.libra.guli.module.calendar.viewmodel.CalendarItemViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@{vm.isToday()?@drawable/select_item_calendar_today:@drawable/select_item_calendar}"
+            android:gravity="center"
+            android:text="@{vm.solarDay}"
+            android:textColor="@{vm.isToday()?@color/white:@color/colorAccent}"
+            android:textSize="@dimen/textSize14"
+            app:isSelected="@{vm.isSelected}"
+            tools:text="11" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_day"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:text="@{vm.lunarDay}"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textSize14" />
+    </RelativeLayout>
+</layout>

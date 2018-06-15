@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.libra.guli.module.calendar.viewmodel.CalendarViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/seven"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSize12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/six"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSize12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/five"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSize12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/four"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSize12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/three"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSize12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/two"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSize12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/one"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSize12" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:itemLayoutId="@{vm.itemLayoutId}"
+            app:items="@{vm.itemViewModelList}"
+            app:layoutManager="android.support.v7.widget.GridLayoutManager" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.libra.guli.module.calendar.viewmodel.CalendarViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/tv_year_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@{vm.yearMonth}"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSize14"
+                tools:text="2018 / 06" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@+id/tv_year_month"
+                android:background="?android:selectableItemBackground"
+                android:onClick="@{vm.preClick}"
+                android:scaleType="center"
+                android:src="@drawable/ic_pre" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/tv_year_month"
+                android:background="?android:selectableItemBackground"
+                android:onClick="@{vm.nextClick}"
+                android:scaleType="center"
+                android:src="@drawable/ic_next" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center"
+                android:onClick="@{vm.menuClick}"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSize14"
+                tools:text="@string/menu" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>
