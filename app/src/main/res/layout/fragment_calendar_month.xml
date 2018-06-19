@@ -17,51 +17,16 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:gravity="center_vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.0"
-                android:gravity="center"
-                android:text="@string/seven"
-                android:textColor="@color/colorAccent"
-                android:textSize="@dimen/textSize12" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
                 android:gravity="center"
-                android:text="@string/six"
-                android:textColor="@color/colorAccent"
-                android:textSize="@dimen/textSize12" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.0"
-                android:gravity="center"
-                android:text="@string/five"
-                android:textColor="@color/colorAccent"
-                android:textSize="@dimen/textSize12" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.0"
-                android:gravity="center"
-                android:text="@string/four"
-                android:textColor="@color/colorAccent"
-                android:textSize="@dimen/textSize12" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.0"
-                android:gravity="center"
-                android:text="@string/three"
+                android:text="@string/one"
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/textSize12" />
 
@@ -79,9 +44,47 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
                 android:gravity="center"
-                android:text="@string/one"
+                android:text="@string/three"
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/textSize12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/four"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSize12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/five"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSize12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/six"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSize12" />
+
+            <TextView
+                android:id="@+id/sunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/seven"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSize12" />
+
         </LinearLayout>
 
         <android.support.v7.widget.RecyclerView

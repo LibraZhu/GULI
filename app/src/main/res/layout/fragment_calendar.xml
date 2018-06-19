@@ -9,7 +9,7 @@
             type="com.libra.guli.module.calendar.viewmodel.CalendarViewModel" />
     </data>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -18,12 +18,13 @@
         <android.support.v4.view.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.0" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp">
+            android:layout_height="40dp"
+            android:layout_gravity="bottom">
 
             <TextView
                 android:id="@+id/tv_year_month"
@@ -67,10 +68,10 @@
                 android:onClick="@{vm.menuClick}"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
+                android:text="@string/menu"
                 android:textColor="@color/colorAccent"
-                android:textSize="@dimen/textSize14"
-                tools:text="@string/menu" />
+                android:textSize="@dimen/textSize14" />
         </RelativeLayout>
 
-    </LinearLayout>
+    </FrameLayout>
 </layout>

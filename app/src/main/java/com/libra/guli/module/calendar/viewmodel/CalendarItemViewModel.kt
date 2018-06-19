@@ -1,6 +1,8 @@
 package com.libra.guli.module.calendar.viewmodel
 
 import android.arch.lifecycle.MutableLiveData
+import android.databinding.ObservableBoolean
+import android.view.View
 import com.libra.core.viewmodel.BaseViewModel
 
 /**
@@ -12,5 +14,7 @@ class CalendarItemViewModel : BaseViewModel() {
     var lunarDay = MutableLiveData<String>()
     var hasSchedule = MutableLiveData<Boolean>()
     var isToday = MutableLiveData<Boolean>()
+    var isGray = MutableLiveData<Boolean>()
     var isSelected = MutableLiveData<Boolean>()
+    var itemClick: View.OnClickListener? = null
 }

@@ -20,7 +20,7 @@ import com.libra.guli.module.home.viewmodel.MainItemViewModel
  * Created by libra on 2017/8/4.
  */
 @BindingAdapter("isSelected")
-fun textView(textView: TextView, uri: Any?, isSelected: Boolean) {
+fun textView(textView: TextView, isSelected: Boolean) {
     textView.isSelected = isSelected
 }
 

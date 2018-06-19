@@ -13,10 +13,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="8dp"
+        android:onClick="@{vm.itemClick}"
+        android:paddingBottom="3dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:paddingTop="8dp">
+        android:paddingTop="3dp">
 
         <TextView
             android:id="@+id/tv_day"
@@ -26,7 +27,7 @@
             android:background="@{vm.isToday()?@drawable/select_item_calendar_today:@drawable/select_item_calendar}"
             android:gravity="center"
             android:text="@{vm.solarDay}"
-            android:textColor="@{vm.isToday()?@color/white:@color/colorAccent}"
+            android:textColor="@{vm.isGray()?@color/gray999:vm.isToday()?@color/white:@color/colorAccent}"
             android:textSize="@dimen/textSize14"
             app:isSelected="@{vm.isSelected}"
             tools:text="11" />
@@ -36,9 +37,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_day"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:singleLine="true"
             android:text="@{vm.lunarDay}"
-            android:textColor="@color/colorAccent"
-            android:textSize="@dimen/textSize14" />
+            android:textColor="@{vm.isGray()?@color/gray999:@color/colorAccent}"
+            android:textSize="@dimen/textSize10"
+            tools:text="初一" />
     </RelativeLayout>
 </layout>
