@@ -18,6 +18,7 @@ import com.libra.guli.R
 import com.libra.guli.module.calendar.CalendarFragment
 import com.libra.guli.module.home.viewmodel.MainItemViewModel
 import com.libra.guli.module.home.viewmodel.MainViewModel
+import com.libra.guli.module.schedule.ScheduleEditActivity
 import com.libra.utils.startActivity
 import com.libra.utils.toast
 import kotlinx.android.synthetic.main.activity_main.*
@@ -77,7 +78,7 @@ class MainActivity : BaseActivity<MainViewModel>() {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
-            Menu.FIRST + 1 -> toast("add")
+            Menu.FIRST + 1 -> ScheduleEditActivity.start(this)
             Menu.FIRST + 2 -> toast("countdown")
         }
         return super.onOptionsItemSelected(item)

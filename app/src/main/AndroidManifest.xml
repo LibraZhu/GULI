@@ -23,6 +23,10 @@
             android:name=".module.home.MainActivity"
             android:label=""
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.schedule.ScheduleEditActivity"
+            android:label="@string/title_schedule"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

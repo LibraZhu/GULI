@@ -51,6 +51,18 @@ object DateUtils {
             return weeks[week_index]
         }
 
+    fun getHour(date: Long): Int {
+        val cal = Calendar.getInstance()
+        cal.timeInMillis = date
+        return cal.get(Calendar.HOUR_OF_DAY)
+    }
+
+    fun getMinute(date: Long): Int {
+        val cal = Calendar.getInstance()
+        cal.timeInMillis = date
+        return cal.get(Calendar.MINUTE)
+    }
+
     /**
      * 获取当前时间戳
      *

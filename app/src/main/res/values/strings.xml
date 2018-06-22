@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">GuLi</string>
     <string name="add">添加</string>
+    <string name="save">保存</string>
     <string name="countdown">倒计时</string>
     <string name="schedule">日程</string>
 
@@ -14,4 +15,15 @@
     <string name="three">三</string>
     <string name="two">二</string>
     <string name="one">一</string>
+    <string name="more">更多</string>
+    <string name="remind">提醒</string>
+    <string name="vibrate">振动</string>
+    <string name="ring">铃声</string>
+    <string name="not">无</string>
+    <string name="remind_minute">提前%d分钟</string>
+    <string name="remind_hour">提前%d小时</string>
+    <string name="remind_day">提前%d天</string>
+    <string name="title_schedule">日程</string>
+    <string name="remind_time">%02d 点 %02d 分</string>
+    <string name="hour_minute">%02d:%02d</string>
 </resources>

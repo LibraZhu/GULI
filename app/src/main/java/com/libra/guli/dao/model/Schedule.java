@@ -14,6 +14,9 @@ public class Schedule {
     private String content;
     private String time;
     private long timeL;
+    private int remind;
+    private int ring;
+    private int vibrate;
 
     public int getId() {
         return id;
@@ -45,5 +48,29 @@ public class Schedule {
 
     public void setTimeL(long timeL) {
         this.timeL = timeL;
+    }
+
+    public int getRemind() {
+        return remind;
+    }
+
+    public void setRemind(int remind) {
+        this.remind = remind;
+    }
+
+    public int getRing() {
+        return ring;
+    }
+
+    public void setRing(int ring) {
+        this.ring = ring;
+    }
+
+    public int getVibrate() {
+        return vibrate;
+    }
+
+    public void setVibrate(int vibrate) {
+        this.vibrate = vibrate;
     }
 }

@@ -13,4 +13,5 @@ abstract class BaseViewModel : AndroidViewModel {
     constructor() : super(AppContext.getApplication())
 
     constructor(application: Application) : super(application)
+
 }

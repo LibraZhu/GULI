@@ -5,7 +5,7 @@ buildscript {
 
     ext.compileSdkVersion = 27
     ext.buildToolsVersion = '27.0.3'
-    ext.minSdkVersion = 15
+    ext.minSdkVersion = 16
     ext.targetSdkVersion = 27
 
     ext.support_vesion = '27.1.1'

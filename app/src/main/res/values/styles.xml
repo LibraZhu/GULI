@@ -20,4 +20,10 @@
         <item name="android:maxLines">15</item>
         <item name="android:ellipsize">end</item>
     </style>
+
+    <style name="Divide">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/divide</item>
+    </style>
 </resources>
