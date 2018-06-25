@@ -2,8 +2,7 @@ package com.libra.guli.module.calendar.utils
 
 import java.text.ParseException
 import java.text.SimpleDateFormat
-import java.util.ArrayList
-import java.util.Calendar
+import java.util.*
 
 /**
  * Created by joybar on 2/24/16.
@@ -140,5 +139,35 @@ object CalendarUtils {
         }
         return list
     }
+    /**
+     * 根据年月生成当月的日历中的日期
+     *
+     * @param year
+     * @param month
+     * @return
+     * @throws ParseException
+     */
+    @Throws(ParseException::class)
+    fun getEverydayOfMonthSimple(year: Int, month: Int): List<CalendarSimpleDate> {
+        val list = ArrayList<CalendarSimpleDate>()
+        val count = getdataCount(year, month) //获取当月的天数
+        val cal = Calendar.getInstance()
+        val sdf = SimpleDateFormat("yyyy-MM-dd")
+        cal.time = sdf.parse(year.toString() + "-" + month + "-" + 1)
+        cal.set(Calendar.DAY_OF_MONTH, 1)
+        var begin = cal.get(Calendar.DAY_OF_WEEK) - 1//获取每月号星期几
+        if (begin == 0) {
+            begin = 7
+        }
+        //重置
+        cal.time = sdf.parse(year.toString() + "-" + month + "-" + 1)
+        //填补本月的数据
+        for (i in 1..count) {
+            val calendarDate = CalendarSimpleDate(year, month, i)
+            list.add(calendarDate)
+            cal.time = sdf.parse(year.toString() + "-" + month + "-" + i)
 
+        }
+        return list
+    }
 }

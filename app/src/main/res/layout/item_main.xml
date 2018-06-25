@@ -16,7 +16,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/select_item_home">
+            android:background="@drawable/select_item_home"
+            android:onClick="@{vm.itemClick}">
 
             <TextView
                 android:id="@+id/tv_schedule_item"
@@ -24,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@{vm.ocntent}" />
+                android:text="@{vm.content}" />
         </FrameLayout>
     </FrameLayout>
 </layout>

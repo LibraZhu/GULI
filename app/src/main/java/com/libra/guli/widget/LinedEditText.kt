@@ -59,13 +59,9 @@ class LinedEditText : AppCompatEditText {
     }
 
 
-
     override fun onTextChanged(text: CharSequence?, start: Int, lengthBefore: Int, lengthAfter: Int) {
-        var textString = text?.toString() ?: ""
-        if (textString.endsWith("\n")) {
-            textString = textString.plus("\n")
-        }
-        super.onTextChanged(textString, start, lengthBefore, lengthAfter)
+        super.onTextChanged(text, start, lengthBefore, lengthAfter)
+        setSelection(text?.length ?: 0)
         requestLayout()
     }
 }

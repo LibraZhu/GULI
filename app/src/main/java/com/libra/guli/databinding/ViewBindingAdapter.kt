@@ -39,14 +39,16 @@ fun imageUri(imageView: ImageView, uri: Any?, placeholder: Drawable?) {
 
 @BindingAdapter("itemLayoutId", "items")
 fun recyclerView(recyclerView: RecyclerView, itemLayoutId: Int, items: ArrayList<BaseViewModel>) {
-    val adapter = object : BaseAdapter() {
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseBindingViewHolder {
-            return object : BaseBindingViewHolder(DataBindingUtil.inflate(LayoutInflater.from(recyclerView.context),
-                    itemLayoutId, parent, false)) {
+    if (recyclerView.adapter == null) {
+        val adapter = object : BaseAdapter() {
+            override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseBindingViewHolder {
+                return object : BaseBindingViewHolder(DataBindingUtil.inflate(LayoutInflater.from(recyclerView.context),
+                        itemLayoutId, parent, false)) {
+                }
             }
-        }
 
+        }
+        recyclerView.adapter = adapter
     }
-    recyclerView.adapter = adapter
-    adapter.setData(items)
+    (recyclerView.adapter as BaseAdapter).setData(items)
 }

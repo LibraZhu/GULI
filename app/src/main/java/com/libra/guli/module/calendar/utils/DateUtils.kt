@@ -233,13 +233,12 @@ object DateUtils {
 
     }
 
-    fun getConvertMonth(numberStr: String): String {
+    fun getConvertMonth(numberStr: Int): String {
 
         val months = arrayOf("一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月")
 
         try {
-            val month = Integer.valueOf(numberStr)
-            return months[month - 1]
+            return months[numberStr - 1]
         } catch (e: Exception) {
             e.printStackTrace()
         }

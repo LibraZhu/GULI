@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.libra.guli.module.countdown.viewmodel.CountdownItemViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center_vertical"
+            android:onClick="@{vm.itemClick}">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:singleLine="true"
+                android:text="@{vm.title}"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSize16"
+                tools:text="七夕" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1.0"
+                android:singleLine="true"
+                android:text="@{vm.content}"
+                android:textColor="@color/gray999"
+                android:textSize="@dimen/textSize12"
+                tools:text="/农历七月七日/   节日" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:singleLine="true"
+                android:text="@{vm.day}"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSize16"
+                tools:text="01" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:singleLine="true"
+                android:text="天"
+                android:textColor="@color/gray999"
+                android:textSize="@dimen/textSize12" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_arrow_down_light" />
+        </LinearLayout>
+    </FrameLayout>
+</layout>

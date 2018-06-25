@@ -39,10 +39,10 @@ dependencies {
     kapt rootProject.ext.databinding_compiler
     api rootProject.ext.lifecycle_extensions
     api rootProject.ext.lifecycle_runtime
-    annotationProcessor rootProject.ext.lifecycle_compiler
-    api rootProject.ext.lifecycle_common_java8
+    kapt rootProject.ext.lifecycle_compiler
+//    api rootProject.ext.lifecycle_common_java8
     api rootProject.ext.lifecycle_reactivestreams
     api rootProject.ext.room_runtime
-    annotationProcessor rootProject.ext.room_compiler
+    kapt rootProject.ext.room_compiler
     api rootProject.ext.gson
 }

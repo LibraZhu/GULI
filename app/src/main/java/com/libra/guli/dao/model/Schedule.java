@@ -3,19 +3,21 @@ package com.libra.guli.dao.model;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
+import java.io.Serializable;
+
 /**
  * @author Libra
  * @since 2018/6/19
  */
 @Entity
-public class Schedule {
-    @PrimaryKey
+public class Schedule implements Serializable{
+    @PrimaryKey(autoGenerate = true)
     private int id;
     private String content;
     private String time;
     private long timeL;
     private int remind;
-    private int ring;
+    private String ring;
     private int vibrate;
 
     public int getId() {
@@ -58,11 +60,11 @@ public class Schedule {
         this.remind = remind;
     }
 
-    public int getRing() {
+    public String getRing() {
         return ring;
     }
 
-    public void setRing(int ring) {
+    public void setRing(String ring) {
         this.ring = ring;
     }
 

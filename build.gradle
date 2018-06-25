@@ -11,10 +11,13 @@ buildscript {
     ext.support_vesion = '27.1.1'
 
     ext.lifecycle_version = '1.1.1'
-    ext.room_version = '1.1.0'
+    ext.room_version = '1.1.1'
 
     ext.gson_version = '2.8.5'
     ext.glide_version = '4.0.0'
+
+    ext.rxjava2_version = '2.1.15'
+    ext.rxandroid_version = '2.0.2'
 
     ext.kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     ext.databinding_compiler = "com.android.databinding:compiler:3.1.2"
@@ -36,6 +39,9 @@ buildscript {
     ext.room_compiler = "android.arch.persistence.room:compiler:$room_version"
     //optional - RxJava support for Room
     ext.room_rxjava2 = "android.arch.persistence.room:rxjava2:$room_version"
+
+    ext.rxjava2 = "io.reactivex.rxjava2:rxjava:$rxjava2_version"
+    ext.rxandroid = "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
 
     ext.gson = "com.google.code.gson:gson:$gson_version"
     ext.glide = "com.github.bumptech.glide:glide:$glide_version"

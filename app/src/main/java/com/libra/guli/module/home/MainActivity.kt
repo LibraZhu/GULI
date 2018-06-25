@@ -15,7 +15,11 @@ import android.widget.Toast
 import com.libra.core.view.BaseActivity
 import com.libra.core.viewmodel.BaseViewModel
 import com.libra.guli.R
+import com.libra.guli.R.string.schedule
+import com.libra.guli.dao.DaoManager
 import com.libra.guli.module.calendar.CalendarFragment
+import com.libra.guli.module.calendar.utils.DateUtils
+import com.libra.guli.module.countdown.CountdownActivity
 import com.libra.guli.module.home.viewmodel.MainItemViewModel
 import com.libra.guli.module.home.viewmodel.MainViewModel
 import com.libra.guli.module.schedule.ScheduleEditActivity
@@ -35,19 +39,11 @@ class MainActivity : BaseActivity<MainViewModel>() {
 
     override fun initViewModel() {
         viewModel?.imageBackground?.value = R.drawable.ic_bg_main
-        viewModel?.countdown3?.value = "七夕倒计时08天"
         viewModel?.itemLayoutId?.value = R.layout.item_main
-        val itemList = ArrayList<BaseViewModel>()
-        var item = MainItemViewModel()
-        item.ocntent.value = "0945 ·打扫，院子"
-        itemList.add(item)
-        item = MainItemViewModel()
-        item.ocntent.value = "0945 ·打扫,院子111"
-        itemList.add(item)
-        item = MainItemViewModel()
-        item.ocntent.value = "0945 ·打扫。院子222、子222子222子222子222"
-        itemList.add(item)
-        viewModel?.itemViewModelList?.value = itemList
+        viewModel?.itemViewModelList?.value = ArrayList()
+        viewModel?.itemClick = { schedule -> ScheduleEditActivity.start(this, schedule) }
+        viewModel?.getScheduleList()
+        viewModel?.getShowCountdown()
 
         visibleCalendar(false)
         viewModel?.arrowClick = View.OnClickListener {
@@ -79,7 +75,7 @@ class MainActivity : BaseActivity<MainViewModel>() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
             Menu.FIRST + 1 -> ScheduleEditActivity.start(this)
-            Menu.FIRST + 2 -> toast("countdown")
+            Menu.FIRST + 2 -> CountdownActivity.start(this)
         }
         return super.onOptionsItemSelected(item)
     }

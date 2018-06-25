@@ -27,6 +27,10 @@
             android:name=".module.schedule.ScheduleEditActivity"
             android:label="@string/title_schedule"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.countdown.CountdownActivity"
+            android:label="@string/title_countdown"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

@@ -1,6 +1,8 @@
 package com.libra.guli.dao;
 
+import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
+import android.content.Context;
 
 import com.libra.guli.dao.model.Countdown;
 import com.libra.guli.dao.model.Schedule;
@@ -15,5 +17,4 @@ public abstract class GLDatabase extends RoomDatabase {
     public abstract ScheduleDao scheduleDao();
 
     public abstract CountdownDao countdownDao();
-
 }

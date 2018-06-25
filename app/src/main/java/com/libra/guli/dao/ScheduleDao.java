@@ -8,6 +8,9 @@ import android.arch.persistence.room.Query;
 import com.libra.guli.dao.model.Schedule;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import io.reactivex.Flowable;
 
 import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
 
@@ -25,5 +28,5 @@ public interface ScheduleDao {
     void delete(Schedule schedule);
 
     @Query("SELECT * FROM schedule")
-    ArrayList<Schedule> load();
+    Flowable<List<Schedule>> load();
 }

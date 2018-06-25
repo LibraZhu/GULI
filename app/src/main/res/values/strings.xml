@@ -20,10 +20,18 @@
     <string name="vibrate">振动</string>
     <string name="ring">铃声</string>
     <string name="not">无</string>
+    <string name="remind_1">准时</string>
     <string name="remind_minute">提前%d分钟</string>
     <string name="remind_hour">提前%d小时</string>
     <string name="remind_day">提前%d天</string>
     <string name="title_schedule">日程</string>
     <string name="remind_time">%02d 点 %02d 分</string>
     <string name="hour_minute">%02d:%02d</string>
+    <string name="ymdhms">%d-%02d-%02d 00:00:00</string>
+    <string name="toast_input_content">日程尚未填写</string>
+    <string name="lunar">/农历%1$s%2$s/  节日</string>
+    <string name="solar_term">/农历%1$s%2$s/  节气</string>
+    <string name="solar">/阳历%1$s%2$s号/  节日</string>
+    <string name="title_countdown">倒计时</string>
+    <string name="day">天</string>
 </resources>

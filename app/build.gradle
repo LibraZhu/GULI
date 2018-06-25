@@ -41,6 +41,9 @@ android {
     dataBinding {
         enabled = true
     }
+    kapt {
+        generateStubs = true
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -59,9 +62,20 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     api rootProject.ext.kotlin_stdlib
-    kapt rootProject.ext.databinding_compiler
+
+    implementation rootProject.ext.lifecycle_extensions
+    implementation rootProject.ext.lifecycle_runtime
+    kapt rootProject.ext.lifecycle_compiler
+//   implementation
+    api rootProject.ext.lifecycle_reactivestreams
+    implementation rootProject.ext.room_runtime
+    kapt rootProject.ext.room_compiler
+
     implementation project(':lib-core')
     implementation rootProject.ext.glide
+    implementation rootProject.ext.rxjava2
+    implementation rootProject.ext.rxandroid
+    implementation rootProject.ext.room_rxjava2
 }
 repositories {
     mavenCentral()

@@ -7,6 +7,11 @@ import com.libra.core.AppContext
 import com.libra.core.viewmodel.BaseViewModel
 import com.libra.guli.dao.model.Schedule
 import com.libra.guli.module.calendar.utils.DateUtils
+import android.media.RingtoneManager.getRingtone
+import android.media.RingtoneManager
+import android.media.Ringtone
+import java.util.ArrayList
+
 
 /**
  * @author Libra
@@ -38,4 +43,8 @@ class ScheduleViewModel : BaseViewModel {
     var vibrate = MutableLiveData<Boolean>()
     var ringClick: View.OnClickListener? = null
     var remindClick: View.OnClickListener? = null
+
+    var remindPosition = 0
+    var ringList = ArrayList<Ringtone>()
+    var ringtone: Ringtone? = null
 }

@@ -36,5 +36,18 @@ class Lunar {
                 chineseTen[day / 10] + chineseNumber[n]
             }
         }
+
+        fun getDayString(day: Int): String {
+            val chineseTen = arrayOf("", "十", "廿", "卅")
+            val n = if (day % 10 == 0) 9 else day % 10 - 1
+            if (day > 30) {
+                return ""
+            }
+            return if (day == 10) {
+                "十"
+            } else {
+                chineseTen[day / 10] + chineseNumber[n]
+            }
+        }
     }
 }
