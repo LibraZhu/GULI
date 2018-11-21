@@ -14,4 +14,11 @@ abstract class BaseViewModel : AndroidViewModel {
 
     constructor(application: Application) : super(application)
 
+    fun getString(resId: Int): String {
+        return getApplication<Application>().getString(resId)
+    }
+
+    fun getString(resId: Int, vararg formatArgs: Any): String {
+        return getApplication<Application>().getString(resId, *formatArgs)
+    }
 }

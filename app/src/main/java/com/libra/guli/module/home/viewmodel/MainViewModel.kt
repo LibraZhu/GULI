@@ -85,22 +85,22 @@ class MainViewModel : BaseViewModel {
                             if (lunar.isLFestival) {
                                 val countdown = Countdown()
                                 countdown.content = lunar.lunarFestivalName
-                                countdown.des = getApplication<App>().getString(R.string.lunar, DateUtils.getConvertMonth(lunar.lunarMonth), Lunar.getChinaDayString(lunar.lunarDay))
-                                countdown.timeL = DateUtils.date2TimeStamp(getApplication<App>().getString(R.string.ymdhms, solar.solarYear, solar.solarMonth, solar.solarDay), "yyyy-MM-dd HH:mm:ss")
+                                countdown.des = getString(R.string.lunar, DateUtils.getConvertMonth(lunar.lunarMonth), Lunar.getChinaDayString(lunar.lunarDay))
+                                countdown.timeL = DateUtils.date2TimeStamp(getString(R.string.ymdhms, solar.solarYear, solar.solarMonth, solar.solarDay), "yyyy-MM-dd HH:mm:ss")
                                 countdown.type = Countdown.TYPE_FESTIVAL
                                 countdownList.add(countdown)
                             } else if (!solar.solar24Term.isNullOrEmpty()) {
                                 val countdown = Countdown()
                                 countdown.content = solar.solar24Term
-                                countdown.des = getApplication<App>().getString(R.string.solar_term, DateUtils.getConvertMonth(lunar.lunarMonth), Lunar.getChinaDayString(lunar.lunarDay))
-                                countdown.timeL = DateUtils.date2TimeStamp(getApplication<App>().getString(R.string.ymdhms, solar.solarYear, solar.solarMonth, solar.solarDay), "yyyy-MM-dd HH:mm:ss")
+                                countdown.des = getString(R.string.solar_term, DateUtils.getConvertMonth(lunar.lunarMonth), Lunar.getChinaDayString(lunar.lunarDay))
+                                countdown.timeL = DateUtils.date2TimeStamp(getString(R.string.ymdhms, solar.solarYear, solar.solarMonth, solar.solarDay), "yyyy-MM-dd HH:mm:ss")
                                 countdown.type = Countdown.TYPE_TERM
                                 countdownList.add(countdown)
                             } else if (solar.isSFestival) {
                                 val countdown = Countdown()
                                 countdown.content = solar.solarFestivalName
-                                countdown.des = getApplication<App>().getString(R.string.solar, DateUtils.getConvertMonth(solar.solarMonth), Lunar.getDayString(solar.solarDay))
-                                countdown.timeL = DateUtils.date2TimeStamp(getApplication<App>().getString(R.string.ymdhms, solar.solarYear, solar.solarMonth, solar.solarDay), "yyyy-MM-dd HH:mm:ss")
+                                countdown.des = getString(R.string.solar, DateUtils.getConvertMonth(solar.solarMonth), Lunar.getDayString(solar.solarDay))
+                                countdown.timeL = DateUtils.date2TimeStamp(getString(R.string.ymdhms, solar.solarYear, solar.solarMonth, solar.solarDay), "yyyy-MM-dd HH:mm:ss")
                                 countdown.type = Countdown.TYPE_FESTIVAL
                                 countdownList.add(countdown)
                             }
@@ -125,17 +125,17 @@ class MainViewModel : BaseViewModel {
             if (list.size > 0) {
                 cd1 = list[0]
                 val day = (((cd1?.timeL ?: 0) - System.currentTimeMillis()) / 1000 / 60 / 60 / 24)
-                countdown3.value = cd1?.content + getApplication<App>().getString(R.string.countdown) + String.format("%02d", day + 1) + getApplication<App>().getString(R.string.day)
+                countdown3.value = cd1?.content + getString(R.string.countdown) + String.format("%02d", day + 1) + getString(R.string.day)
             }
             if (list.size > 1) {
                 cd2 = list[1]
                 val day = (((cd2?.timeL ?: 0) - System.currentTimeMillis()) / 1000 / 60 / 60 / 24)
-                countdown3.value = cd2?.content + getApplication<App>().getString(R.string.countdown) + String.format("%02d", day + 1) + getApplication<App>().getString(R.string.day)
+                countdown3.value = cd2?.content + getString(R.string.countdown) + String.format("%02d", day + 1) + getString(R.string.day)
             }
             if (list.size > 2) {
                 cd3 = list[2]
                 val day = (((cd3?.timeL ?: 0) - System.currentTimeMillis()) / 1000 / 60 / 60 / 24)
-                countdown3.value = cd3?.content + getApplication<App>().getString(R.string.countdown) + String.format("%02d", day + 1) + getApplication<App>().getString(R.string.day)
+                countdown3.value = cd3?.content + getString(R.string.countdown) + String.format("%02d", day + 1) + getString(R.string.day)
             }
         }
     }

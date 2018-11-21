@@ -12,4 +12,5 @@
     <color name="gray">#CCCCCC</color>
     <color name="backgroundColor">#f5f5f5</color>
     <color name="transparent">@android:color/transparent</color>
+    <color name="colorLoadingText">#000000</color>
 </resources>

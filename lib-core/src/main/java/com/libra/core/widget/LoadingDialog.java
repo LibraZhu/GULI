@@ -128,6 +128,7 @@ public class LoadingDialog extends ProgressDialog {
         } else {
             textView.setVisibility(View.GONE);
         }
+        textView.setTextColor(ContextCompat.getColor(getContext(),R.color.colorLoadingText));
         linearLayout.addView(textView,
                 new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
                         ViewGroup.LayoutParams.WRAP_CONTENT));
